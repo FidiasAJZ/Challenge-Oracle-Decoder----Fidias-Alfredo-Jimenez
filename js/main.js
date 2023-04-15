@@ -47,7 +47,7 @@ loader.load(
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
 //renderer.setSize(window.innerWidth, window.innerHeight); //This helps to change the size
-renderer.setSize(550,550); //This helps to change the object's size
+renderer.setSize(450,450); //This helps to change the object's size
 
 //Add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
