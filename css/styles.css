@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
 
+*{
+    font-family: poppins;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -223,6 +227,6 @@ p{
     padding: 5px; */
 
     margin-left: 45%;
-    margin-top: 15%;
+    margin-top: 25%;
     padding: 0px;
 }

@@ -47,7 +47,7 @@ function encriptar(){
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'No se permiten letras mayúsculas, caracteres especiales, tildes ni números!'
+        text: 'No se permiten letras mayúsculas, caracteres especiales ni tildes!'
       })
     }else{
         let texto = document.getElementById("inputTexto").value.toLowerCase();
@@ -96,51 +96,64 @@ function encriptar(){
 }
 
 function desencriptar(){
-    let texto = document.getElementById("inputTexto").value.toLowerCase();
-    var cifrado = texto.replace(/enter/igm,"e");
-    var cifrado = cifrado.replace(/ober/igm,"o");
-    var cifrado = cifrado.replace(/imes/igm,"i");
-    var cifrado = cifrado.replace(/ai/igm,"a");
-    var cifrado = cifrado.replace(/ufat/igm,"u");
-
-    document.getElementById("muneco").style.display = "none";
-    document.getElementById("textoEncontrado").style.display = "none";
-    document.getElementById("areaTexto").innerHTML = cifrado;
-    document.getElementById("copiar").style.display = "show";
-    document.getElementById("copiar").style.display = "inherit";
-
-        //Codigo para utilizar el sweetalert
-        let timerInterval
-        Swal.fire({
-        title: 'Casi listo!',
-        html: 'Cargando <b></b>',
-        timer: 1000,
-        timerProgressBar: true,
-        imageUrl: "../img/uncode.gif",
-        imageWidth: 400,
-        imageHeight: 400,
-        imageAlt: 'Custom image',
-    /*     backdrop: `
-                rgba(0,0,123,0.4)
-                url("../img/code.gif")
-                left top
-                no-repeat
-            `, */
-        didOpen: () => {
-            Swal.showLoading()
-            const b = Swal.getHtmlContainer().querySelector('b')
-            timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft()
-            }, 100)
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-        }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('I was closed by the timer')
-        }
-        })
+    var miTextArea = document.getElementById("inputTexto");
+    var texto = miTextArea.value; // Obtener el texto del textarea
+    var expReg = /^[a-z0-9\s]+$/; // Expresión regular para validar caracteres especiales
+  
+    if (!expReg.test(texto)) {
+      // Si el texto contiene caracteres especiales, mostrar una alerta
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se permiten letras mayúsculas, caracteres especiales ni tildes!'
+      })
+    }else{
+        let texto = document.getElementById("inputTexto").value.toLowerCase();
+        var cifrado = texto.replace(/enter/igm,"e");
+        var cifrado = cifrado.replace(/ober/igm,"o");
+        var cifrado = cifrado.replace(/imes/igm,"i");
+        var cifrado = cifrado.replace(/ai/igm,"a");
+        var cifrado = cifrado.replace(/ufat/igm,"u");
+    
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("textoEncontrado").style.display = "none";
+        document.getElementById("areaTexto").innerHTML = cifrado;
+        document.getElementById("copiar").style.display = "show";
+        document.getElementById("copiar").style.display = "inherit";
+    
+            //Codigo para utilizar el sweetalert
+            let timerInterval
+            Swal.fire({
+            title: 'Casi listo!',
+            html: 'Cargando <b></b>',
+            timer: 1000,
+            timerProgressBar: true,
+            imageUrl: "../img/uncode.gif",
+            imageWidth: 400,
+            imageHeight: 400,
+            imageAlt: 'Custom image',
+        /*     backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("../img/code.gif")
+                    left top
+                    no-repeat
+                `, */
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+            }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+                console.log('I was closed by the timer')
+            }
+            })
+    }
 }
 
