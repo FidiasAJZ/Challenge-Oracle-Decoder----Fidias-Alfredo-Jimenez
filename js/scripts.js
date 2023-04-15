@@ -71,7 +71,7 @@ function encriptar(){
         Swal.fire({
         title: 'Encriptando!',
         html: 'Cargando <b></b>',
-        timer: 500,
+        timer: 1000,
         timerProgressBar: true,
         imageUrl: "../img/catpro.gif",
         imageWidth: 400,
