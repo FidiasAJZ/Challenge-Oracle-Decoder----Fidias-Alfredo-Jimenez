@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura - Encriptador.</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo" id="logo">
+        <a href="https://www.aluracursos.com/" target="_blank"><img class="logoImg" src="img/Logo-1.png" alt="logo_Alura" /></a>
+      </div>
+      <div class="left">
+        <!-- 
+            <input type="text" id="inputTexto" placeholder="Ingrese el texto aquí" class="text-input">-->
+        <textarea
+          name="name"
+          id="inputTexto"
+          cols="30"
+          rows="10"
+          class="text-input"
+        >
+Ingrese el texto aquí</textarea
+        >
+        <div id="container3D"></div>
+      </div>
+      <div class="right">
+        <img src="img/Muñeco.png" alt="muneco" id="muneco" class="muneco" />
+        <h4 class="textoEncontrado" id="textoEncontrado">
+          Ningún mensaje fue encontrado.
+        </h4>
+        <textarea name="name" id="areaTexto" cols="30" rows="5">
+Ingrese el texto que desees encriptar o desencriptar.</textarea
+        >
+        <button id="copiar" type="button" name="button" onclick="copiar()">
+          ¡Copiar!
+        </button>
+      </div>
+      <div class="left-button">
+        <br>
+        <button
+          type="button"
+          name="button"
+          id="btn-Encriptar"
+          onclick="encriptar()"
+        >
+          Encriptar
+        </button>
+        <button
+          type="button"
+          name="button"
+          id="btn-Desencriptar"
+          onclick="desencriptar()"
+        >
+          Desencriptar
+        </button>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Importando Sweet Alert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/sweetalert.min.js" type="text/javascript"></script>
+    <!-- Agregando la libreria de vanilla para animar el logo. -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector("#logo"), {
+        max: 5,
+        speed: 100,
+        glare: true,
+        "max-glare": 0.1,
+      });
+      VanillaTilt.init(document.querySelector("#btn-Encriptar"), {
+        max: 10,
+        speed: 100,
+        glare: true,
+        "max-glare": 0.2,
+      });
+      VanillaTilt.init(document.querySelector("#btn-Desencriptar"), {
+        max: 10,
+        speed: 100,
+        glare: true,
+        "max-glare": 0.2,
+      });
+      VanillaTilt.init(document.querySelector("#copiar"), {
+        max: 15,
+        speed: 100,
+        glare: true,
+        "max-glare": 0.2,
+      });
+    </script>
+  </body>
+</html>
