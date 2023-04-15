@@ -217,12 +217,12 @@ p{
 }
 
 #container3D canvas{
-/*     margin: auto;
+/*  margin: auto;
     width: 160px;
     height: 250px;
     padding: 5px; */
 
     margin-left: 45%;
-    margin-top: 5%;
+    margin-top: 15%;
     padding: 0px;
 }
