@@ -1,3 +1,6 @@
+//Documentación de donde aprendí a utilizar sweetAlert2
+//https://sweetalert2.github.io
+
 function copiar(){
     var contenido = document.querySelector("#areaTexto");
     contenido.select(); //Seleccionamos el texto en el textarea.
