@@ -65,13 +65,13 @@ body{
 }
 
 .text-input{
-    position: absolute;
+    margin: 5%;
     /*width: 555px;
     height: 28px;*/
     left: 380px;
     top: 138px;
 
-    width: 26%;
+    width: 70%;
     height: 20%;
 
     resize: none;
@@ -227,6 +227,6 @@ p{
     padding: 5px; */
 
     margin-left: 45%;
-    margin-top: 25%;
+    margin-top: 0%;
     padding: 0px;
 }
