@@ -1,5 +1,6 @@
-//Tarde unos días en poder implementar esta librería, dejo en comentarios las fuentes de donde aprendí a hacerlo.
+//Tarde unos días en poder implementar esta librería llamada Three.js pero me parecio increíble poder usar elementos 3d en mi pagina, dejo en comentarios las fuentes de donde aprendí a hacerlo.
 //Youtube: https://youtu.be/lGokKxJ8D2c
+//Three.js https://threejs.org
 
 //Import the THREE.js library
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
