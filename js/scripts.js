@@ -18,7 +18,7 @@ function validarTexto(){
 function agregarTexto() {
     var miTextArea = document.getElementById("inputTexto");
     if (miTextArea.value == "") {
-      miTextArea.value = "Ingrese aquí el texto";
+      miTextArea.value = "Ingrese el texto aquí";
     }
   }
   
