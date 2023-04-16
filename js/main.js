@@ -14,7 +14,7 @@ const scene = new THREE.Scene();
 //create a new camera with positions and angles
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
 
-//Keep track of the mouse position, so we can make the eye move
+//Keep track of the mouse position, so we can make the object move
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 
@@ -36,6 +36,7 @@ loader.load(
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
+    object.rotation.x = 70;
     scene.add(object);
   },
   function (xhr) {
